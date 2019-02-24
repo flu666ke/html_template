@@ -1,0 +1,162 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 965px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    border-top: 5px solid #76c38f;
+    background: #0000009c;
+    min-height: 300px;
+    padding: 40px 15px 0 15px;
+}
+
+header ul {
+    display: flex;
+    margin-right: -20px;
+    flex-wrap: wrap;
+}
+
+header ul li a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+.btn,
+.active,
+header ul a:hover {
+    background: #76c38f;
+    border-radius: 15px;
+    padding: 10px 20px;
+    transition: 0.5s;
+    color: #fff;
+
+}
+
+.btn:hover {
+    background: #629d75;
+}
+
+header .container {
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 28px;
+    color: #fff;
+}
+
+#slider {
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
+    padding: 40px 0;
+    color: #fff;
+}
+
+#slider .image {
+    max-width: 435px;
+    border: 25px solid #6b6b6b;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #6b6b6b;
+}
+
+#slider .image img {
+    max-width: 100%;  
+}
+
+#slider .description {
+    max-width: 325px;
+}
+
+#slider .description a {
+    margin-top: 20px;
+    display: block;
+    max-width: 140px;
+    text-align: center;
+}
+
+#slider .description h3 {
+    font-size: 46px;
+    font-weight: 100;
+    line-height: 44px;
+    margin: 0;
+}
+
+#slider .description p {
+    color: #979797;
+}
+
+#slider .arrow-left,
+#slider .arrow-right {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+}
+
+#slider .arrow-left {
+    left: 0;
+}
+
+#slider .arrow-right {
+    right: 0;
+}
+
+@media(max-width: 840px) {
+    #slider .image {
+        max-width: 260px;;
+    }
+}
+
+@media(max-width: 700px) {
+    header {
+        text-align: center;
+        padding-top: 15px;
+    }
+    header ul {
+        margin-top: 15px;
+        width: 100%;
+        flex-direction: column;
+    }
+    #logo {
+        width: 100%;
+    }
+    #slider {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding:  0 15px 15px;
+    }
+    #slider .description a {
+        margin: 15px auto;
+    }
+}

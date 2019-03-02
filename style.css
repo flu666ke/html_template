@@ -57,7 +57,6 @@ header ul a:hover {
     padding: 10px 20px;
     transition: 0.5s;
     color: #fff;
-
 }
 
 .btn:hover {
@@ -90,7 +89,7 @@ header .container {
 }
 
 #slider .image img {
-    max-width: 100%;  
+    max-width: 100%;
 }
 
 #slider .description {
@@ -130,9 +129,56 @@ header .container {
     right: 0;
 }
 
+/*block3*/
+
+#services {
+    margin: 60px auto;
+}
+
+.service {
+    width: 25%;
+}
+
+@keyframes hoverService {
+    0% {
+        top: 0px;
+        color: #000;
+        background: #fff;
+    }
+    100% {
+        top: -10px;
+        color: #fff;
+        background: #76c38f;
+    }
+}
+
+.service .wrap {
+    box-shadow: 0 0 7px 2px #0000008f;
+    margin: 0 10px;
+    text-align: center;
+    padding: 15px;
+    transition: 0.5s;
+    position: relative;
+}
+
+.service .wrap:hover {
+    cursor: pointer;
+    animation: hoverService 1s;
+    top: -10px;
+    color: #fff;
+    background: #76c38f;
+}
+
+.service h2 {
+    text-transform: uppercase;
+    font-size: 26px;
+    margin: 10px 0 15px 0;
+}
+
 @media(max-width: 840px) {
     #slider .image {
-        max-width: 260px;;
+        max-width: 260px;
+        ;
     }
 }
 
@@ -154,9 +200,24 @@ header .container {
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding:  0 15px 15px;
+        padding: 0 15px 15px;
     }
     #slider .description a {
         margin: 15px auto;
+    }
+
+    #services {
+        margin-top: 15px;
+    }
+
+    .service {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width: 580px) {
+    .service {
+        width: 100%;
     }
 }

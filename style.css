@@ -97,7 +97,7 @@ header .container {
 }
 
 #slider .description a {
-    margin-top: 20px;
+    margin: 15px auto;
     display: block;
     max-width: 140px;
     text-align: center;
@@ -132,7 +132,7 @@ header .container {
 /*block3*/
 
 #services {
-    margin: 60px auto 45px auto;
+    margin: 60px auto;
 }
 
 .service {
@@ -185,6 +185,10 @@ header .container {
 
 /* block */
 
+#gallery {
+    margin-top: 40px;
+}
+
 #gallery .image-block {
     width: 33.33%;
 }
@@ -198,10 +202,20 @@ header .container {
 }
 
 #gallery .wrap {
-    box-shadow: 0 0 5px 2px #00000063;
+    border: 5px solid #ddd;
     margin: 16px;
     position: relative;
     min-height: 205px;
+    transition: 0.5s;
+}
+
+#gallery .wrap:hover {
+    border-color: #76c38f;
+    cursor: pointer;
+}
+
+#gallery .wrap:hover span {
+    opacity: 0;
 }
 
 #gallery .wrap img {
@@ -217,12 +231,51 @@ header .container {
     padding: 5px 0;
     width: 100%;
     text-align: center;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.latest {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    max-width: 965px;
+    font-weight: bold;
+    font-size: 30px;
+    background: #303030;
+    height: 3px;
+}
+
+.latest span {
+    background: #303030;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    max-width: 260px;
+    margin: auto;
+    border-radius: 15px;
+    position: relative;
+    top: -25px;
+}
+
+@media(max-width: 1030px) {
+    #gallery .image-block .wrap, #services .service .wrap {
+        margin: 8px !important;
+    }
+
+    .latest {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    header ul {
+        margin-right: 0;
+    }
 }
 
 @media(max-width: 840px) {
     #slider .image {
         max-width: 260px;
-        ;
     }
 }
 
@@ -231,14 +284,17 @@ header .container {
         text-align: center;
         padding-top: 15px;
     }
+
     header ul {
         margin-top: 15px;
         width: 100%;
         flex-direction: column;
     }
+
     #logo {
         width: 100%;
     }
+
     #slider {
         flex-direction: column;
         align-items: center;
@@ -246,20 +302,27 @@ header .container {
         text-align: center;
         padding: 0 15px 15px;
     }
+
     #slider .description a {
         margin: 15px auto;
     }
+
     #services {
-        margin-top: 15px;
+        margin: 15px 0 20px;
     }
+
     .service {
         width: 50%;
         margin-bottom: 15px;
     }
+
+    #gallery .image-block {
+        width: 50%;
+    }
 }
 
 @media(max-width: 580px) {
-    .service {
+    .service, #gallery .image-block {
         width: 100%;
     }
 }

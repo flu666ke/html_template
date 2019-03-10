@@ -337,6 +337,10 @@ header .container {
     header ul {
         margin-right: 0;
     }
+
+    .footer-top-block {
+        width: 50%;
+    }
 }
 
 @media(max-width: 840px) {
@@ -390,5 +394,18 @@ header .container {
 @media(max-width: 580px) {
     .service, #gallery .image-block {
         width: 100%;
+    }
+
+    .footer-top-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    #footer-top-wrap {
+        padding: 15px;
+    }
+
+    #footer-top-wrap h3 {
+        margin-top: 0;
     }
 }
